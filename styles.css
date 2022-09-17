@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Definições gerais da página */
+
+ul {
+    list-style: none;
+}
+/* Tira os indicadores de lista */
+
+body {
+    background-image: url(../Images/Fundo.jpg);
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #121214;
+}
+/* definições do plano de fundo */
+
+body * {
+    font-family: 'inter', sans-serif;
+    line-height: 160%;
+}
+/* definições de fonte. lembre-se que o restante do códifo de fonte está no html */
+
+header {
+    height: 120px;
+}
+header img {
+    border-radius: 999px;
+    padding: 4px;
+    width: 120px;
+    height: 120px;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    animation: Fromtop .7s .4s backwards;
+}
+
+header div {
+    max-width: 580px;
+    width: 90%;
+    margin: auto;
+    margin-top: 32px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    transition: transform .3s;
+}
+
+header div:hover {
+    transform: scale(1.1)
+}
+
+main{
+    max-width: 580px;
+    width: 90%;
+    margin-bottom: 32px;
+    display: grid;
+    gap: 24px;
+    margin-top: 32px;
+    margin-left: auto;
+    margin-right: auto;  
+}
+
+main section {
+    animation: FromBottom .7s backwards;  
+}
+
+main section:nth-child(1) {
+    animation-delay: 0s;
+}
+
+main section:nth-child(2){
+    animation-delay: .7s;
+}
+
+main section:nth-child(3){
+    animation-delay: 1.4s;
+}
+
+/* Definições do display tal como seu tamanho, a forma de disposição, margens e afins */
+
+section{
+    color: white;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    padding-top: 4px;
+    border-radius: 10px;
+}
+/* Definições de cor do texto no color e da margem da caixa no restante */
+
+section div {
+    background-color: #2A2634;
+    align-items: flex-start;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px;
+}
+/* Definições do design das caixas: cor, alinhamento, margens e borda */
+section h2 {
+    letter-spacing: -0.47px;
+}
+/* espaçamento do título */
+
+section p {
+    letter-spacing: -0.18px;
+    color: #A1A1AA;
+}
+/* espaçamento e cor do parágrafo */
+
+ul {
+    display:flex;
+    gap: 16px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+
+/* definições de layout das listas;flex wrap significa que ao adicionar novos itens, a lista não
+vai seguir infinitamente para o lado */
+
+.Games-list img {
+    border-radius: 8px;
+    width: 90px;
+    transition: transform .3;
+}
+
+.Games-list img:hover {
+    transform: scale(1.1);
+}
+/* definições de sessão de jogos de largura e borda circular */
+
+.Channels-list img {
+    border: 1px solid #443E54;
+    border-radius: 999px;
+    box-sizing: border-box;
+    width: 70px;
+    transition: transform .3;
+}
+
+.Channels-list img:hover {
+transform: scale(1.1);
+}
+
+.Social-list li{
+    transition: transform .3s;
+}
+
+.Social-list li:hover{
+    transform: scale(1.1);
+}
+
+/* definições da sessão de canais com borda, borda redonda, largura */
+
+/* Animatin */
+
+@keyframes Fromtop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        tranform: translateY(0)
+    }
+}
+
+@keyframes FromBottom {
+    from {
+        opacity:0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
